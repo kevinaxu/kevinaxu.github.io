@@ -1,0 +1,2 @@
+- setup ssh access
+- link expose here (and add .gitignore for expose)
