@@ -1,2 +1,10 @@
+todo:
+- sidebar disappears on scroll (keep the "table of contents" bar)
+- homepage displays first few (2) images from each page
+- map view somewhere?
+- optimize images
+- add directory nesting
+
+done:
 - setup ssh access
 - link expose here (and add .gitignore for expose)
