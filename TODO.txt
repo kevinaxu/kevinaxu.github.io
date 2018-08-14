@@ -1,10 +1,16 @@
-todo:
-- sidebar disappears on scroll (keep the "table of contents" bar)
-- homepage displays first few (2) images from each page
-- map view somewhere?
-- optimize images
-- add directory nesting
+Front End
+[] sidebar disappear on scroll (keep the "table of contents" bar)
+[] homepage should display first few images of each story
+[] map view slat (ex Alaska trip should "follow" the map as the scroll continues)
 
-done:
-- setup ssh access
-- link expose here (and add .gitignore for expose)
+Misc.
+[] setup google analytics
+[x] setup ssh access
+[x] link expose here (and add .gitignore for expose)
+
+Configs
+[] combine per-image configs into global config
+[] config should handle ordering of images, not file name
+
+Performance
+[] optimize images (remove option for higher quality images)
