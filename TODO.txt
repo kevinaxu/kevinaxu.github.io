@@ -5,6 +5,7 @@ Front End
 
 Misc.
 [] setup google analytics
+[] update Expose script to embed google analytics into every index.html page
 [x] setup ssh access
 [x] link expose here (and add .gitignore for expose)
 
