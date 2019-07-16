@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <script src="todo.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="tailwind.min.css">
+</header>
+
+<body class="bg-green-200 font-sans text-lg m-4">
+
+    <div class="header-container max-w-2xl px-8 pt-8 pb-1 mx-auto rounded-t-lg bg-green-100">
+        <h1 class="font-sans text-4xl mb-8 text-gray-600">Minimal List</h1>
+    </div>
+
+    <!-- Add a new List item -->
+    <div class="input-container max-w-2xl px-8 pb-10 pt-2 mx-auto bg-green-100">
+        <form class="w-full">
+            <div class="flex items-center border-b border-b-2 border-teal-500 py-2">
+                <input id="list-input" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Feed the doggie">
+                <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button"
+                    onclick="todoList.addListItemUI()">
+                    Add
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bulk Action operations -->
+    <div id="bulk-actions" class="flex flex-wrap justify-between items-end max-w-2xl px-8 py-3 mx-auto bg-green-100">
+
+        <!-- Select All, Deselct All Buttons - pull it left of button bar -->
+        <div class="flex justify-start flex-1">
+            <button class="bulk-select-all flex-shrink-0 m-1 bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-2 rounded" type="button"
+                    onclick="todoList.toggleListItems(true)">
+                <span>Select All</span>
+            </button>
+            <button class="bulk-deselect-all flex-shrink-0 m-1 bg-blue-500 hover:bg-blue-700 border-blue-500 hover:border-blue-700 text-sm border-4 text-white py-1 px-2 rounded" type="button"
+                    onclick="todoList.toggleListItems(false)">
+                <span>Deselect All</span>
+            </button>
+        </div>
+
+        <!-- Mark Complete, Remove Selected - pull it right of button bar -->
+        <div class="flex justify-end flex-1">
+            <button class="bulk-mark-complete flex-shrink-0 m-1 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button"
+                    onclick="todoList.disableSelected()">
+                <span>Mark Complete</span>
+            </button>
+            <button class="bulk-delete-selected flex-shrink-0 m-1 bg-red-500 hover:bg-red-700 border-red-500 hover:border-red-700 text-sm border-4 text-white py-1 px-2 rounded" type="button"
+                    onclick="todoList.deleteSelected()">
+                <span>Remove Selected</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- List Display -->
+    <div id="list-container" class="flex justify-between items-end max-w-2xl px-8 py-3 mx-auto mb-4 rounded-b-lg bg-green-100">
+        <ul id="todo-list" class="list-reset w-full pb-8"></ul>
+    </div>
+</body>
+
+</html>
